@@ -1,4 +1,4 @@
-**README file for posted estimation files**
+***README file for posted estimation files**
 
 **&quot;Out-of-pocket costs attributable to dementia: A longitudinal analysis&quot;**
 
@@ -42,16 +42,8 @@ The following describes how the files correspond to the inputs and output:
 
 | File | Description | Inputs/Outputs | Notes |
 | --- | --- | --- | --- |
-| 000\_master.do | Sets macros for all variables, specifications, and replications used in the other files |
- | Only edit the global folder and the individual global macros |
-| 00\_langaweir.do | Cleans supplementary data – Langa-Weir Classification of Cognitive Function, and adds in proxy responses | Input: COGIMP9216A\_R, RAND HRS Fat files, randhrs1992\_2016v2.dta
-Output: lw\_data.dta |
- |
-| 01\_cleanandmerge.do | Cleans and merges all raw data files | Input: HRS tracker file, RAND HRS Fat files, randhrs1992\_2016v2.dta, randhrsimp1992\_2014v2.dta, lw\_data.dta,
-Output: match.dta |
- |
-| 02\_est.do | Runs Basu and Manning method | Input: match.dta
-Output: Sample-specific tables | Use the local macros in 000\_master.do to select which set of tables to produce |
-| 03\_summarystatistics.do | Creates summary statistics | Input: match.dta
-Output: Sample-specific summary statistics tables |
- |
+| 000\_master.do | Sets macros for all variables, specifications, and replications used in the other files || Only edit the global folder and the individual global macros |
+| 00\_langaweir.do | Cleans supplementary data – Langa-Weir Classification of Cognitive Function, and adds in proxy responses | Input: COGIMP9216A\_R, RAND HRS Fat files, randhrs1992\_2016v2.dta Output: lw\_data.dta |
+| 01\_cleanandmerge.do | Cleans and merges all raw data files | Input: HRS tracker file, RAND HRS Fat files, randhrs1992\_2016v2.dta, randhrsimp1992\_2014v2.dta, lw\_data.dta, Output: match.dta | |
+| 02\_est.do | Runs Basu and Manning method | Input: match.dta Output: Sample-specific tables | Use the local macros in 000\_master.do to select which set of tables to produce |
+| 03\_summarystatistics.do | Creates summary statistics | Input: match.dta Output: Sample-specific summary statistics tables | |
